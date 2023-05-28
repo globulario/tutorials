@@ -61,3 +61,18 @@ The first thing to configure is the Name of your server. By default, your comput
 The second property to configure is the Domain. Similar to the server name, the domain will be used in the URL. You will also need to configure the domain with your DNS provider, such as GoDaddy, for example. More information on using HTTPS will be provided later.
 
 To access Globular from your local network, you need to configure ports. By default, Globular uses the HTTP port 8080 and the port range [10000:10100]. Each Globular service requires two ports: one for the service itself and one for its reverse-proxy. As there are currently 28 services, a minimum of 56 ports are required within the range. Ensure that these ports are available and not being used by any other application. You can change the port range as desired, but make sure there are enough ports available to run all services; otherwise, your server will behave erratically.
+
+# Https Generate certificates
+If you plan to serve content over the internet, I highly recommend configuring your server to use HTTPS instead of HTTP. To generate a certificate, follow a few simple steps. The first step is to obtain a domain name from a domain name provider such as GoDaddy, DynDNS, or any other provider. The goal is to associate your server's IP address with a specific domain. This way, people can access your server using a readable domain name instead of an IP address. It's important to note that you cannot generate a certificate for an IP address with Globular.
+
+Once your IP is associated with the domain name, try accessing your server using the following command (replace the address with your server name and domain):
+
+```bash
+ping servername.serverdomain.com
+```
+
+You should receive a response. If not, ensure that your router is configured correctly. To do this, add port forwarding rules for port 80, port 443, and the port range 10000-10100. Since there are many router models, I recommend referring to the documentation specific to your router for information on port forwarding.
+
+Now, stop your server. In your configuration file, set `PortHttp` to 80 instead of 8080 and set `Protocol` to HTTPS instead of HTTP. You will now see in the console that the certificates have been generated. These certificates are located in the `etc/globular/config/tls` directory. Make sure this directory has the correct permission levels.
+
+Congratulations! Your server is now accessible via HTTPS from anywhere in the world.
