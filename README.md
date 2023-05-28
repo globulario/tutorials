@@ -47,3 +47,8 @@ sudo ./Globular
 ```
 
 By running this command, you will be able to view detailed information about warnings, informational messages, and errors encountered by Globular. Additionally, you will receive messages from within the web application itself, such as JavaScript error messages.
+
+# Globular Administration Console
+Globular comes with its own administration console, which allows you to configure various server settings. The console is a comprehensive application that enables you to manage resources, access permissions, users, groups, roles, file permissions, and much more. For a detailed presentation of the console application, I recommend reading this [article](https://medium.com/@dave.courtois60/here-comes-globular-5dee34eb52f8).
+
+To access the console application, simply navigate to the following link: [http://localhost:8080](http://localhost:8080). If needed, you can replace 'localhost' with your computer name to access the server from your local network. Further tutorials will provide more detailed information on the required functionality.
