@@ -24,3 +24,26 @@ Make sure to replace `globular_1.0.0-1.0.1_amd64.deb` with the actual name of th
 For more detailed instructions, you can refer to this [article](https://medium.com/@dave.courtois60/in-this-article-i-will-guide-you-through-the-installation-and-configuration-of-your-personal-cloud-f8bdce33d33a).
 
 If you prefer working with Docker, there is also a Docker image available. You can find detailed instructions in this [article](https://medium.com/@dave.courtois60/installing-globular-using-docker-fabd4f96b095).
+
+## Where is Globular?
+Globular functions as an application server, running as a service on your computer. To check if it is running, you can open the process manager and look for a process named 'Globular'. Since Globular is a microservice manager, you will observe multiple processes such as 'persistence_server', 'config_server', and 'sql_server'. To enable web application access to gRPC, Globular utilizes a reverse proxy called 'grpcebproxy'. Keep an eye out for this process as well. Note that each service instance require it own reverse proxy.
+
+## Stop Globular service
+If you prefer to run Globular in the console, you can do so by stopping the service. On Linux, you can run the following command:
+
+```bash
+sudo service Globular stop
+```
+
+On Windows, you can easily stop the service named 'Globular' using the Windows Service Manager interface.
+
+## Start Globular in the console
+Now, open a command prompt. In Windows, make sure to open the prompt with administrator privileges. Navigate to the directory where Globular is installed, which is typically located at "C:/Program Files/Globular" in Windows or "/usr/local/share/globular" in Linux.
+
+Once in the appropriate directory, run the following command:
+
+```bash
+sudo ./Globular
+```
+
+By running this command, you will be able to view detailed information about warnings, informational messages, and errors encountered by Globular. Additionally, you will receive messages from within the web application itself, such as JavaScript error messages.
