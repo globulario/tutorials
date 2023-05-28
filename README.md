@@ -21,4 +21,6 @@ sudo apt-get install ./globular_1.0.0-1.0.1_amd64.deb
 
 Make sure to replace `globular_1.0.0-1.0.1_amd64.deb` with the actual name of the Globular package file.
 
-for more detail you can this [article](https://medium.com/@dave.courtois60/in-this-article-i-will-guide-you-through-the-installation-and-configuration-of-your-personal-cloud-f8bdce33d33a)
+For more detailed instructions, you can refer to this [article](https://medium.com/@dave.courtois60/in-this-article-i-will-guide-you-through-the-installation-and-configuration-of-your-personal-cloud-f8bdce33d33a).
+
+If you prefer working with Docker, there is also a Docker image available. You can find detailed instructions in this [article](https://medium.com/@dave.courtois60/installing-globular-using-docker-fabd4f96b095).
