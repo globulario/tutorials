@@ -52,3 +52,12 @@ By running this command, you will be able to view detailed information about war
 Globular comes with its own administration console, which allows you to configure various server settings. The console is a comprehensive application that enables you to manage resources, access permissions, users, groups, roles, file permissions, and much more. For a detailed presentation of the console application, I recommend reading this [article](https://medium.com/@dave.courtois60/here-comes-globular-5dee34eb52f8).
 
 To access the console application, simply navigate to the following link: [http://localhost:8080](http://localhost:8080). If needed, you can replace 'localhost' with your computer name to access the server from your local network. Further tutorials will provide more detailed information on the required functionality.
+
+# Configuration
+Network applications require a significant amount of configuration, and Globular is no exception. The configurations for Globular are stored in the file '/etc/config/config.json'. Additionally, you can read server configurations from the following HTTP address: [http://localhost:8080/config](http://localhost:8080/config).
+
+The first thing to configure is the Name of your server. By default, your computer hostname is used as the server name. However, you can change it to a name of your choice. Keep in mind that the server name will be part of the URL, so ensure it follows the syntax and character rules for correct display.
+
+The second property to configure is the Domain. Similar to the server name, the domain will be used in the URL. You will also need to configure the domain with your DNS provider, such as GoDaddy, for example. More information on using HTTPS will be provided later.
+
+To access Globular from your local network, you need to configure ports. By default, Globular uses the HTTP port 8080 and the port range [10000:10100]. Each Globular service requires two ports: one for the service itself and one for its reverse-proxy. As there are currently 28 services, a minimum of 56 ports are required within the range. Ensure that these ports are available and not being used by any other application. You can change the port range as desired, but make sure there are enough ports available to run all services; otherwise, your server will behave erratically.
