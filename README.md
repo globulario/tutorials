@@ -73,6 +73,6 @@ ping servername.serverdomain.com
 
 You should receive a response. If not, ensure that your router is configured correctly. To do this, add port forwarding rules for port 80, port 443, and the port range 10000-10100. Since there are many router models, I recommend referring to the documentation specific to your router for information on port forwarding.
 
-Now, stop your server. In your configuration file, set `PortHttp` to 80 instead of 8080 and set `Protocol` to HTTPS instead of HTTP. You will now see in the console that the certificates have been generated. These certificates are located in the `etc/globular/config/tls` directory. Make sure this directory has the correct permission levels.
+Now, stop your server. In your configuration file, set `PortHttp` to 80 instead of 8080 and set `Protocol` to HTTPS instead of HTTP. By starting your server, you will now see in the console that the certificates have been generated. These certificates are located in the `etc/globular/config/tls` directory. Make sure this directory has the correct permission levels.
 
 Congratulations! Your server is now accessible via HTTPS from anywhere in the world.
