@@ -94,5 +94,5 @@ Congratulations! Your server is now accessible via HTTPS from anywhere in the wo
 
 Now that Globular is up and running on your server, you have two options: creating a new microservice or creating a new web application. So you can choose between the backend and frontend tutorial.
 
--[Backend tutorials](backend/README.md)
--[Frontent tutorials](frontend/README.md)
+- [Backend tutorials](backend/README.md)
+- [Frontent tutorials](frontend/README.md)
