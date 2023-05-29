@@ -23,3 +23,5 @@ In this section, I will guide you through the creation of a new microservice wit
 10. **Documentation and Collaboration:** Comprehensive documentation, including service contracts, API specifications, and architectural diagrams, should be maintained to facilitate collaboration among teams and ensure a shared understanding of the microservices architecture. Communication channels and tools should be established to encourage collaboration and knowledge sharing.
 
 Following these rules and best practices can help ensure the success of microservices architecture by promoting modularity, scalability, maintainability, and agility in the development process.
+
+Globular will help you to follow these principles. By using gRPC as its backbone, principle 4 is ensured. Globular also helps you to securely deploy your microservice. The event service can be used to exchange information between microservices, which helps keep your services loosely coupled. The logging microservice can also be used to collect information
